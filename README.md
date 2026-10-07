@@ -53,9 +53,9 @@ The application contains **58 detailed pet profiles across 5 distinct categories
 
 ```
 fa1/
-├── public/                       # Static public assets
+├── public/                       # Static public assets & photography
 │   ├── _redirects                # Netlify SPA redirect rules
-│   └── favicon.ico               # Application favicon
+│   └── images/                   # High-definition animal and banner photography
 ├── src/
 │   ├── components/               # Modular & reusable UI components
 │   │   ├── ConfirmModal.jsx      # Accessible delete/action confirmation modal
@@ -64,14 +64,17 @@ fa1/
 │   │   ├── GroomingTips.jsx      # Breed-specific grooming schedule and tips
 │   │   ├── LoadingSpinner.jsx    # Animated loading spinner with accessible status
 │   │   ├── Navbar.jsx            # Desktop nav & mobile drawer navigation
-│   │   ├── Pagination.jsx        # Configurable numeric page switcher
+│   │   ├── NutritionTips.jsx     # Dietary recommendations by species and life stage
 │   │   ├── PetCard.jsx           # Pet showcase card with badge indicators
+│   │   ├── PetCategoryFilter.jsx # Category chip filter selector
 │   │   ├── PetGrid.jsx           # Responsive grid/table view switch
 │   │   ├── QuickCareTips.jsx     # High-priority care guidelines
+│   │   ├── SearchBar.jsx         # Accessible live-search input with clear button
 │   │   ├── ToastNotification.jsx # Animated notification toast alert system
 │   │   └── VaccinationSchedule.jsx # Preventive immunization schedule table
 │   ├── context/
-│   │   └── PetContext.jsx        # Global Context Provider for pets, reminders, & toasts
+│   │   ├── PetContext.jsx        # Global Context Provider for 58 pets & reminders
+│   │   └── ToastContext.jsx      # Global Toast Notification Provider & hook
 │   ├── data/                     # Data store with 58 curated animal profiles
 │   │   ├── petData.js            # Core dataset & category master exports
 │   │   ├── petCarePlans.js       # Dynamic age calculator & milestone projection engine
@@ -82,7 +85,9 @@ fa1/
 │   │   └── additionalFish.js     # 10 aquatic species profiles
 │   ├── hooks/                    # Reusable custom React hooks
 │   │   ├── useDebounce.js        # Debounce timer hook for search optimization
-│   │   └── usePagination.js      # Pagination calculation and slicing hook
+│   │   ├── usePagination.js      # Pagination calculation and slicing hook
+│   │   ├── usePets.js            # Re-export hook for PetContext
+│   │   └── useToast.js           # Re-export hook for ToastContext
 │   ├── pages/                    # Route-level page views
 │   │   ├── HomePage.jsx          # Hero section, statistics, features, and quick links
 │   │   ├── PetCatalogPage.jsx    # 58-pet directory with multi-filter and sort controls
@@ -98,16 +103,19 @@ fa1/
 │   │   ├── components.test.jsx   # DOM assertions for Navbar, PetCard, Spinner
 │   │   ├── filterUtils.test.js   # Multi-filter search, sorting, and category logic
 │   │   ├── usePagination.test.js # Pagination state transition tests
-│   │   └── validation.test.js    # Form validator, character limits, URL regex tests
+│   │   ├── validation.test.js    # Form validator, character limits, URL regex tests
+│   │   └── setup.js              # JSDOM matchers and testing setup
 │   ├── utils/                    # Helper utility functions
 │   │   ├── filterUtils.js        # Search query matching and sorting algorithms
 │   │   └── validation.js         # Schema validations for pet profiles and reminders
 │   ├── App.jsx                   # Root layout, router setup, and toast provider
 │   ├── index.css                 # Comprehensive CSS3 design system (5,000+ lines)
 │   └── main.jsx                  # Application entry point mounting into HTML root
+├── .gitignore                    # Git ignore rules for node_modules and builds
 ├── vercel.json                   # Vercel deployment rewrite rules for SPA routing
 ├── vite.config.js                # Vite build and Vitest configuration
-└── package.json                  # Dependencies, test scripts, and build commands
+├── package.json                  # Dependencies, test scripts, and build commands
+└── README.md                     # Complete project documentation & guide
 ```
 
 ---
