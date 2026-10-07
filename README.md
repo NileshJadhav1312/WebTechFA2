@@ -14,7 +14,7 @@
 ## 🔗 Project Links
 
 - **GitHub Repository:** [https://github.com/NileshJadhav1312/WebTechFA2](https://github.com/NileshJadhav1312/WebTechFA2)
-- **Live Deployed Application:** [https://petcare-hub.vercel.app](https://petcare-hub.vercel.app) *(or your Netlify / Vercel link)*
+- **Live Deployed Application:** [https://petcarehubbynilesh.vercel.app/](https://petcarehubbynilesh.vercel.app/)
 
 ---
 
